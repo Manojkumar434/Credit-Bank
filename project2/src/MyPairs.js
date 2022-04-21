@@ -1,3 +1,5 @@
+import { useParams } from "react-router-dom"
+
 export const Step=()=>
 {
     return(
@@ -9,9 +11,10 @@ export const Step=()=>
 
 export const Goal=()=>
 {
+    const{SmallHouse}=useParams()
     return(
         <>
-        <h2>Goal is good mind set of our life moving confident....?</h2>
+        <h2>Goal is good mind set of our life moving confident{SmallHouse}....?</h2>
         </>
     )
 }
