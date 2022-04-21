@@ -1,8 +1,11 @@
+import { Menus } from "./Navi";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
 const App=()=>
 {
   return(
     <>
-    <h2>Project 2 welcome to all</h2>
+    <Menus/>
     </>
   )
 }
