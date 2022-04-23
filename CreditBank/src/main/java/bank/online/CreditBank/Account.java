@@ -22,6 +22,7 @@ public class Account
 	private String accountHolder;
 	private double accountBalance;
 	private long contact;
+	private String password;
 	private String email;
 	@Column(unique = true)
 	private long customerId;
@@ -33,17 +34,18 @@ public class Account
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Account(String accountHolder, double accountBalance, long contact, String email, long customerId,
-			Collection<Transaction> mytrans) {
+	public Account(String accountHolder, double accountBalance, long contact, String password, String email,
+			long customerId, Collection<Transaction> mytrans) {
 		super();
 		this.accountHolder = accountHolder;
 		this.accountBalance = accountBalance;
 		this.contact = contact;
+		this.password = password;
 		this.email = email;
 		this.customerId = customerId;
 		this.mytrans = mytrans;
 	}
-	@Override
+		@Override
 	public String toString() {
 		return "Account [accountNumber=" + accountNumber + ", accountHolder=" + accountHolder + ", accountBalance="
 				+ accountBalance + ", contact=" + contact + ", email=" + email + ", customerId=" + customerId
@@ -90,6 +92,12 @@ public class Account
 	}
 	public void setMytrans(Collection<Transaction> mytrans) {
 		this.mytrans = mytrans;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 }

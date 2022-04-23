@@ -11,7 +11,7 @@ public class AccountService
 	
 	public Account SavingAccount(Account account)
 	{
-		
+		return repo.save(account);
 	}
 	
 
