@@ -1,9 +1,9 @@
-export const NewAccount=()=>
+export const NewAccount01=()=>
 {
     return(
         <div className="container-fluid">
             <div className="row justify-content-center">
-                <div>
+                <div classs>
                     
                 </div>
 

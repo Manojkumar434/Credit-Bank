@@ -21,5 +21,4 @@ public class BankController
 		Account obj=aserv.SavingAccount(account);
 		return obj.getAccountNumber()+"has openned for"+account.getAccountHolder();
 	}
-
 }
