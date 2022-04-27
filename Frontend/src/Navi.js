@@ -9,7 +9,8 @@ export const Menus=()=>{
                 <Navbar.Toggle aria-controls="sample" />
                 <Navbar.Collapse id="sample">
                 <Nav className="ms-auto">
-                    <Nav.Link active href="/">Component One</Nav.Link>
+                    <Nav.Link active href="/">Login Page</Nav.Link>
+                    <Nav.Link active href="/one">New Account</Nav.Link>
                     <Nav.Link active href="/Two">Component Two</Nav.Link>
                     <Nav.Link active href="/Three">Component Three</Nav.Link>
                 </Nav>

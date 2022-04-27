@@ -52,12 +52,7 @@ export const NewAccount01=()=>
     const isOkay=async()=>{
         if(validate.pass1===validate.pass2)
         {
-            setAccount((old)=>{
-                return{
-                    ...old,
-                    "password":validate.pass1
-                }
-            })
+            account.password=validate.pass1
             const o = await joining(account)
             alert(o.data)
             reset()
@@ -87,7 +82,7 @@ export const NewAccount01=()=>
     }
 
     return(
-        <div className="container-fluid">
+        <div className="container-fluid text-info">
             <Typography className='text-center text-secondary' variant="h4" component="div" gutterBottom>
                     New Account Openning
                 </Typography>
@@ -181,10 +176,10 @@ export const NewAccount01=()=>
                         />
                         <div className='row mt-2'>
                             <div className='col-lg-6 col-sm-12'>
-                                <input onChange={eves} value={validate.pass1} name="pass1"  type="password" placeholder="Password" className='form-control'/>
+                                <input onChange={eves} value={validate.pass1} name="pass1" type="password" placeholder="Password" className='form-control'/>
                             </div>
                             <div className='col-lg-6 col-sm-12'>
-                                <input onChange={eves} value={validate.pass2} name="pass2" type="password" placeholder="Password" className='form-control'/>
+                                <input onChange={eves} value={validate.pass2}  name="pass2" type="password" placeholder="Password" className='form-control'/>
                             </div>
                         </div>
                         <div className='row justify-content-around mt-2'>
