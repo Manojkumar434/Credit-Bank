@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -21,4 +22,10 @@ public class BankController
 		Account obj=aserv.SavingAccount(account);
 		return obj.getAccountNumber()+"has openned for"+account.getAccountHolder();
 	}
-}
+	
+	@PostMapping("/login")
+	public Account callVaild(@RequestParam("cid") long cid,@RequestParam("ps") String ps)
+	{
+		return aserv.getByValid(cid, ps);
+	}
+	}

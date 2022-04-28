@@ -4,11 +4,12 @@ import LoginIcon from '@mui/icons-material/Login';
 import CancelIcon from '@mui/icons-material/Cancel';
 import { Carousel } from "react-bootstrap"
 import { useState } from "react";
+import { stepIn } from "./connectAxios";
 
 export const Login=()=>
 {
     const[log,setLog]=useState({
-        "user":"",
+        "user":0,
         "pass":""
     })
 
@@ -23,14 +24,24 @@ export const Login=()=>
         })
     }
 
-    const logging=()=>{
+    const logging=async()=>{
+        const t= await stepIn(log)
+        if(t.data)
+        {
+            window.location.assign("/home");
+        }
+        else
+        {
+            alert("Customer id or Password is wrong")
+            cancel()
+        }
 
     }
 
     const cancel=()=>{
         setLog(()=>{
             return{
-                "user":"",
+                "user":0,
                 "pass":""
             }
         })
@@ -98,7 +109,7 @@ export const Login=()=>
                         <input value={log.pass} onChange={observe} name="pass" type="password" placeholder="Password" className='mt-2 form-control'/>
                         <div className="mt-2 row justify-content-around">
                             <Button className='col-4' variant="outlined" color="primary" onClick={logging}>
-                                <LoginIcon/>Open
+                                <LoginIcon/>Login
                             </Button>
                             <Button className='col-4' variant="outlined" color="error" onClick={cancel}>
                                 <CancelIcon/>Cancel

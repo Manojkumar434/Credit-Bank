@@ -11,8 +11,7 @@ export const Menus=()=>{
                 <Nav className="ms-auto">
                     <Nav.Link active href="/">Login Page</Nav.Link>
                     <Nav.Link active href="/one">New Account</Nav.Link>
-                    <Nav.Link active href="/Two">Component Two</Nav.Link>
-                    <Nav.Link active href="/Three">Component Three</Nav.Link>
+                    <Nav.Link active href="/home">Home Page</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -10,7 +10,7 @@ public interface AccountRepository extends JpaRepository<Account, Long>
 	//Hibernate Querey Languages 
 	//("select * from tablename where customer_id and password ")---SQL
 	
-	@Query("from Account where customerId=:cust and password=:pass ")
+	@Query("from Account where customerId=:cust and password=:pass")
 	public Account findAcccountByValidation(long cust,String pass);
 
 }
