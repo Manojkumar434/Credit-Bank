@@ -4,6 +4,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { NewAccount01 } from "./Signup";
 import { Login } from "./Login";
 import { Home } from "./Home";
+import { Transactions } from "./Transaction";
 
 const App=()=>
 {
@@ -15,6 +16,7 @@ const App=()=>
       <Route path="/" exact element={<Login/>}/>
       <Route path='/one' exact element={<NewAccount01/>} />
       <Route path='/home' exact element={<Home/>} />
+      <Route path="/showt" exact element={<Transactions/>}/>
     </Routes>
     </BrowserRouter>
     

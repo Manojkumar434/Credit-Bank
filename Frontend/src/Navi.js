@@ -12,6 +12,7 @@ export const Menus=()=>{
                     <Nav.Link active href="/">Login Page</Nav.Link>
                     <Nav.Link active href="/one">New Account</Nav.Link>
                     <Nav.Link active href="/home">Home Page</Nav.Link>
+                    <Nav.Link active href="/showt">Transaction Page</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -115,6 +115,7 @@ export const Login=()=>
                                 <CancelIcon/>Cancel
                             </Button>
                         </div>
+                        <a href="/one" className="link-success text-center text-decoration-none">Go to new account Create</a>
                 </div>
             </div>
         </div>
