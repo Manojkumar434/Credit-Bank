@@ -5,6 +5,7 @@ export const Home=()=>
         <>
             <div className="container">
             <h1 className="text-primary text-center text-uppercase">
+            {JSON.parse(localStorage.getItem("loggedperson")).accountHolder}
             </h1>
             <div className="row justify-content-center">
                 <div className="col-lg-12 col-md-10 col-sm-12 p-3">
